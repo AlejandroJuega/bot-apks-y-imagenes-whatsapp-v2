@@ -1,6 +1,19 @@
 {
-  "spotify": "https://drive.google.com/file/d/1HobNt3xh1E_NEtxmlm8lxLdG5pLy64xg/view?usp=sharing",
-  "fondo_pantalla": "https://drive.google.com/file/d/1Q6EZRfAWlYV-CGu1bF2goA6Fgd_d7MYo/view?usp=sharing"
-  "subway surfers":https://drive.google.com/file/d/1hkpZjmOuze4ZnuEy1DSHOFCnllhXvvYi/view?usp=drive_link"
-  
+  "apks": {
+    "spotify": "https://drive.google.com/file/d/1HobNt3xh1E_NEtxmlm8lxLdG5pLy64xg/view?usp=sharing",
+    "fondo_pantalla": "https://drive.google.com/file/d/1Q6EZRfAWlYV-CGu1bF2goA6Fgd_d7MYo/view?usp=sharing",
+    "subway surfers": "https://drive.google.com/file/d/1hkpZjmOuze4ZnuEy1DSHOFCnllhXvvYi/view?usp=drive_link",
+    "fornite": "https://drive.google.com/file/d/1ZkRvvvg_VnFrwVVO7JVK6rMOxqHHFzg8/view?usp=drive_link",
+    "five nights at freddys": "https://drive.google.com/file/d/15Dy4bBOqQr5pcLz0DcLCA7ZRWSO76mq3/view?usp=drive_link",
+    "REPO mobile": "https://drive.google.com/file/d/1ZeSGB8PF-_N_0BL54pYw5WmntDtmkFUS/view?usp=drive_link",
+    "Among us": "https://drive.google.com/file/d/1DSSIA4PJxeYzLWrrLbIBEZfa3dREIfNw/view?usp=drive_link"
+  },
+  "fondos": {
+    "burbuja-aceite": "https://drive.google.com/file/d/1NcPLutpMJkIX5larhQFHoDTy9yT2-Idi/view?usp=drive_link",
+    "900w-Y3": "https://drive.google.com/file/d/13R7aGKa6csEnKUxJG_qbszGdR0BTZdDp/view?usp=drive_link",
+    "tablet-hd": "https://drive.google.com/file/d/1KObFzUAt4Hv2jLfiY3i67F8Wj1WxJ1ht/view?usp=drive_link",
+    "watercolor": "https://drive.google.com/file/d/1NmbbUNS0uN0SCx9VH6yBlgnQfMZJS0SI/view?usp=drive_link",
+    "abstracto-1": "https://drive.google.com/file/d/1nn-acWnUzDAz-vMD5kiOZDF6JlihzPpL/view?usp=drive_link",
+    "abstracto-2": "https://drive.google.com/file/d/1mqIyD3tbC4p_dElgOYFR3owxsg3Gk3EI/view?usp=drive_link"
+  }
 }
