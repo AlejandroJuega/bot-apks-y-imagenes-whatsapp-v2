@@ -20,9 +20,11 @@ http.createServer((req, res) => {
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
+
         executablePath: process.platform === 'win32' 
             ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' 
-            : '/usr/bin/google-chrome-stable',
+            : null, // Al poner null en Linux, Puppeteer usará el que instalamos con 'npx puppeteer install'
+        
         headless: true,
         args: [
             '--no-sandbox',
@@ -84,3 +86,4 @@ client.on('message', async (message) => {
 // 5. INICIALIZAR
 console.log('Iniciando sistema...');
 client.initialize();
+
