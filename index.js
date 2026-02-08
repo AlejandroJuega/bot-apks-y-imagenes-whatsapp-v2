@@ -1,39 +1,39 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
-const fs = require('fs');
+const http = require('http');
 
-console.log('--- INICIANDO BOT ---');
+// ESTO ES VITAL: Un servidor web para que Render vea que el bot está vivo
+http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Bot Online');
+}).listen(process.env.PORT || 3000);
+
+console.log('Iniciando proceso...');
 
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        // En Render, el ejecutable suele estar aquí
-        executablePath: '/usr/bin/google-chrome-stable',
-        headless: true, // IMPORTANTE: siempre true en la nube
+        headless: true,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-extensions',
-            '--gpu-sandbox',
-            '--binaries-prefix=/usr/bin'
-        ]
+            '--disable-gpu'
+        ],
     }
 });
 
 client.on('qr', (qr) => {
-    console.log('--- NUEVO QR GENERADO ---');
+    console.log('--- ¡ESCANEAME! ---');
     qrcode.generate(qr, {small: true});
 });
 
 client.on('ready', () => {
-    console.log('--- ¡BOT CONECTADO Y LISTO! ---');
+    console.log('¡Conexión exitosa!');
 });
 
-client.on('auth_failure', msg => {
-    console.error('--- ERROR DE AUTENTICACIÓN ---', msg);
-});
+// Mensaje de diagnóstico
+console.log('Llamando a initialize...');
+client.initialize().catch(err => console.log('Error al iniciar:', err));
 
-console.log('Conectando a WhatsApp...');
-client.initialize();
 
