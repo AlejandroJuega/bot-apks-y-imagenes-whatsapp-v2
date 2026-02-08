@@ -1,2 +1,4 @@
+[variables]
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = 'true'
 [phases.setup]
-nixPkgs = ["nodejs", "google-chrome"]
+    nixPkgs = ['nodejs', 'google-chrome']
