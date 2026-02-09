@@ -19,17 +19,9 @@ http.createServer((req, res) => {
 // 2. CONFIGURACIÓN DEL CLIENTE
 const client = new Client({
     authStrategy: new LocalAuth(),
-    puppeteer: {
-        executablePath: process.platform === 'win32'
-            ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
-            : '/usr/bin/google-chrome-stable',
+puppeteer: {
         headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu'
-        ]
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
 });
 
@@ -85,5 +77,6 @@ client.on('message', async (message) => {
 // 5. INICIALIZAR
 console.log('Iniciando sistema...');
 client.initialize();
+
 
 
