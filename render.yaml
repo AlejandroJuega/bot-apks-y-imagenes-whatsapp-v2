@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bot-apks-v2
+    runtime: docker # <--- ESTO ES LO QUE FORCEARÁ EL CAMBIO
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 10000
